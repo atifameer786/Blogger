@@ -9,7 +9,7 @@ public interface CategoryService {
     CategoryDto createCategory(CategoryDto category);
     CategoryDto updateCategory(CategoryDto category,Integer id);
     void deleteCategory(Integer id);
-    CategoryDto gtCategory(Integer id);
+    CategoryDto getCategory(Integer id);
     List<CategoryDto> getCategories();
 
 

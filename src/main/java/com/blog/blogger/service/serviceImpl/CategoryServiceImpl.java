@@ -52,7 +52,7 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     @Override
-    public CategoryDto gtCategory(Integer id) {
+    public CategoryDto getCategory(Integer id) {
         Category category = this.categoryRepository.findById(id)
         .orElseThrow(()-> new ResourceNotFoundException("Category", "id", id));
 

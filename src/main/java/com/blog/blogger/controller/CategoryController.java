@@ -53,7 +53,7 @@ public class CategoryController {
     @GetMapping("/{categoryId}")
     public ResponseEntity<CategoryDto> getCategoryById(@PathVariable("categoryId") Integer cId) {
         
-        return  ResponseEntity.ok(categoryService.gtCategory(cId));
+        return  ResponseEntity.ok(categoryService.getCategory(cId));
     }
 
     @GetMapping("/")

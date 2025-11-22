@@ -7,12 +7,12 @@ import com.blog.blogger.pojo.PostDto;
 
 public interface PostService {
 
-    Post createPost(PostDto postDto);
+    PostDto createPost(PostDto postDto,Integer userId,Integer categoryId);
     Post udpatePost(PostDto postDto,Integer id);
-    Post getPostById(Integer id);
+    PostDto getPostById(Integer id);
     void deletePost(Integer id);
-    List<Post> getAllPosts();
-    List<Post> getPostsByCategory(Integer categoryId);
-    List<Post> getPostsByUser(Integer userId);
+    List<PostDto> getPosts();
+    List<PostDto> getPostsByCategory(Integer categoryId);
+    List<PostDto> getPostsByUser(Integer userId);
     List<Post> searchPosts(String keyword);
 }
