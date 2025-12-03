@@ -1,5 +1,10 @@
 package com.blog.blogger.pojo;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -25,5 +30,10 @@ public class UserDto {
     private String password;
     @NotEmpty
     private String about;
+
+    @JsonIgnore
+    private Set<PostDto> posts = new HashSet<>();
+    @JsonIgnore
+    private Set<CommentDto> comments = new HashSet<>();
     
 }
